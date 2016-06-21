@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='perseus_nemo_ui',
-    version="0.0.1",
+    version="0.0.2",
     packages=find_packages(exclude=["examples", "tests"]),
     url='https://github.com/PerseusDL/perseus_nemo_ui',
     license='GNU GPL',

@@ -4,7 +4,7 @@ setup(
     name='perseus_nemo_ui',
     version="0.0.1",
     packages=find_packages(exclude=["examples", "tests"]),
-    url='https://github.com/alpheios/perseus_nemo_ui',
+    url='https://github.com/PerseusDL/perseus_nemo_ui',
     license='GNU GPL',
     author='Bridget Almas',
     author_email='balmas@gmail.com',

@@ -7,6 +7,7 @@ Perseus UI Plugin for CapiTainS Nemo
 This repository contains templates, xslt and css for the Perseus instance of Nemo
 
 It overrides the following templates:
+    * index
     * menu
     * passage_footer
     

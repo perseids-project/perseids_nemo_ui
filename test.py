@@ -15,7 +15,7 @@ nemo = Nemo(
     chunker={"default": level_grouper},
     plugins=[PerseusNemoUi()],
     transform={"default": resource_filename("perseus_nemo_ui","data/assets/static/xslt/epidocShort.xsl")},
-    urntransform={ "default": lambda x :x.upTo(URN.NO_PASSAGE) }
+    urntransform={ "default": lambda x : { 'version':x.upTo(URN.NO_PASSAGE), 'full':x } }
 )
 
 app.run()

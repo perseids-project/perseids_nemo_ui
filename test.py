@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_nemo import Nemo
 from flask_nemo.chunker import level_grouper
+from MyCapytain.common.reference import URN
 
 from perseus_nemo_ui import PerseusNemoUi
 from pkg_resources import resource_filename
@@ -13,6 +14,8 @@ nemo = Nemo(
     api_url="http://cts.perseids.org/api/cts",
     chunker={"default": level_grouper},
     plugins=[PerseusNemoUi()],
-    transform={"default": resource_filename("perseus_nemo_ui","data/assets/static/xslt/epidocShort.xsl")}
+    transform={"default": resource_filename("perseus_nemo_ui","data/assets/static/xslt/epidocShort.xsl")},
+    urntransform={ "default": lambda x :x.upTo(URN.NO_PASSAGE) }
 )
+
 app.run()

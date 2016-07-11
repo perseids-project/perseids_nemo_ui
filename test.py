@@ -14,8 +14,7 @@ nemo = Nemo(
     api_url="http://cts.perseids.org/api/cts",
     chunker={"default": level_grouper},
     plugins=[PerseusNemoUi()],
-    transform={"default": resource_filename("perseus_nemo_ui","data/assets/static/xslt/epidocShort.xsl")},
-    urntransform={ "default": lambda x : { 'version':x.upTo(URN.NO_PASSAGE), 'full':x } }
+    transform={"default": resource_filename("perseus_nemo_ui","data/assets/static/xslt/epidocShort.xsl")}
 )
 
 app.run()

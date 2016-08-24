@@ -31,6 +31,8 @@
     </xsl:element>
   </xsl:template>
   
+  <xsl:template match="t:figure" />
+  
   <xsl:template match="t:l">
     <xsl:element name="li">
       <xsl:attribute name="value"><xsl:value-of select="@n"/></xsl:attribute>

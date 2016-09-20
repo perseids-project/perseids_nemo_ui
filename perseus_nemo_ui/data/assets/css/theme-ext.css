@@ -51,3 +51,7 @@ ol > li:nth-child(1) {
 ol > li:hover {
   list-style: decimal;
 }
+
+ol.hidenum > li {
+  list-style: none;
+}

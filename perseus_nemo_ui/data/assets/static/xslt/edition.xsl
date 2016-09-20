@@ -11,7 +11,14 @@
         <xsl:text>edition lang_</xsl:text>
         <xsl:value-of select="@xml:lang"/>
       </xsl:attribute>
-      <xsl:apply-templates/>
+      <xsl:choose>
+          <xsl:when test="child::t:l">
+              <ol><xsl:apply-templates /></ol>
+          </xsl:when>
+          <xsl:otherwise>
+              <xsl:apply-templates/>
+          </xsl:otherwise>
+      </xsl:choose>
     </div>
   </xsl:template>
   
@@ -30,7 +37,20 @@
       </xsl:choose>
     </xsl:element>
   </xsl:template>
-  
+
+  <xsl:template match="t:quote">
+    <xsl:element name="blockquote">
+      <xsl:choose>
+        <xsl:when test="child::t:l">
+            <ol class="hidenum"><xsl:apply-templates /></ol>
+        </xsl:when>
+        <xsl:otherwise>
+            <xsl:apply-templates/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:element>
+  </xsl:template>
+
   <xsl:template match="t:figure" />
   
   <xsl:template match="t:l">

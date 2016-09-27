@@ -14,7 +14,7 @@ setup(
         "flask_nemo>=1.0.0b3",
         "nemo_arethusa_plugin>=0.0.1",
         "nemo_oauth_plugin>=0.0.4",
-        "nemo_plokamos_plugin>=0.0.6"
+        "nemo_plokamos_plugin>=0.0.8"
     ],
     tests_require=[
         "capitains_nautilus>=0.0.6"

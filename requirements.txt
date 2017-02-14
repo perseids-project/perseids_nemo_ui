@@ -2,4 +2,4 @@ flask_nemo==1.0.0b3
 capitains_nautilus==0.0.6
 nemo_arethusa_plugin>=0.0.1
 nemo-oauth-plugin>=0.0.4
-nemo_plokamos_plugin>=0.0.17b0
+nemo_plokamos_plugin==0.0.17b0
